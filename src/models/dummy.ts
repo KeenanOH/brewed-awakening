@@ -6,3 +6,8 @@ export const Dummy = z.object({
 })
 
 export type Dummy = z.infer<typeof Dummy>
+
+export const selectDummy = {
+    id: true,
+    content: true
+}

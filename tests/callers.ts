@@ -8,7 +8,7 @@ export const unauthenticatedCaller = createCaller({
     user: null
 })
 
-export const userCaller = createCaller({
+export const authenticatedCaller = createCaller({
     prisma,
     user: {
         id: user.id,
@@ -20,7 +20,7 @@ export const userCaller = createCaller({
     }
 })
 
-export const adminUserCaller = createCaller({
+export const adminCaller = createCaller({
     prisma,
     user: {
         id: adminUser.id,
