@@ -7,3 +7,9 @@ export const Item = z.object({
 })
 
 export type Item = z.infer<typeof Item>
+
+export const selectItem = {
+    id: true,
+    name: true,
+    imageUrl: true
+}

@@ -9,3 +9,8 @@ export const CategoryDetail = z.object({
 })
 
 export type CategoryDetail = z.infer<typeof CategoryDetail>
+
+export const selectCategoryDetail = {
+    id: true,
+    name: true
+}

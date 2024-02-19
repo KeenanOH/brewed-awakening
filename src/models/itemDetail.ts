@@ -1,6 +1,6 @@
 import { z } from "zod"
 
-import { Category } from "@/models/category"
+import { Category, selectCategory } from "@/models/category"
 
 export const ItemDetail = z.object({
     id: z.string(),
@@ -10,3 +10,12 @@ export const ItemDetail = z.object({
 })
 
 export type ItemDetail = z.infer<typeof ItemDetail>
+
+export const selectItemDetail = {
+    id: true,
+    name: true,
+    imageUrl: true,
+    category: {
+        select: selectCategory
+    }
+}
