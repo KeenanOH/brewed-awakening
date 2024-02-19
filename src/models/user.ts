@@ -9,3 +9,11 @@ export const User = z.object({
 })
 
 export type User = z.infer<typeof User>
+
+export const selectUser = {
+    id: true,
+    name: true,
+    email: true,
+    image: true,
+    isAdmin: true
+}

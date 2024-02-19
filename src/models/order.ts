@@ -6,3 +6,8 @@ export const Order = z.object({
 })
 
 export type Order = z.infer<typeof Order>
+
+export const selectOrder = {
+    id: true,
+    createdAt: true
+}
