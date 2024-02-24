@@ -1,13 +1,15 @@
-import Button from './Button';
 
-const App = () => {
+import React from 'react';
+import { RouteComponentProps } from "react-router-dom";
+
+const CheckoutButton: React.FC<RouteComponentProps> = ({ history }) => {
     const handleClick = () => {
-        console.log('Button clicked!');
+        history.push('/checkout');
     };
 
     return (
-        <div>
-            <Button onClick={handleClick}>Checkout</Button>
-        </div>
+        <button onClick={handleClick}>Checkout</button>
     );
 };
+
+export default CheckoutButton;
