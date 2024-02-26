@@ -11,7 +11,7 @@ const ProfilePicture: React.FC<ProfilePictureProps> = ({ imageURL, alt, size = 1
         width: size,
         height: size,
         display: "inline-block",
-        borderRadius: "50%",
+        borderRadius: "55%",
         overflow: "hidden"
     }
 
