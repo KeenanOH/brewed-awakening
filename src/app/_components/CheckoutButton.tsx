@@ -1,15 +1,10 @@
 
 import React from 'react';
-import { RouteComponentProps } from "react-router-dom";
 
-const CheckoutButton: React.FC<RouteComponentProps> = ({ history }) => {
-    const handleClick = () => {
-        history.push('/checkout');
-    };
-
+function MyComponent() {
     return (
-        <button onClick={handleClick}>Checkout</button>
+        <button>
+            Checkout
+        </button>
     );
-};
-
-export default CheckoutButton;
+}
