@@ -1,9 +1,15 @@
 import React from "react"
 
-export default function checkoutButton() {
+type CheckoutButtonProps = {
+
+    onClick: () => void
+}
+
+export default function CheckoutButton({  onClick }: CheckoutButtonProps) {
     return (
-        <div>
-            <button>Checkout</button>
+        <div className={"text-[#319795]"} onClick={() => onClick}>
+            More -{">"}
         </div>
     )
+
 }

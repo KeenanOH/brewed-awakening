@@ -4,11 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d09f81b-569c-4e3f-ab3b-f7053422e372" name="Changes" comment="CheckoutButoon" />
+    <list default="true" id="2d09f81b-569c-4e3f-ab3b-f7053422e372" name="Changes" comment="Week 1">
+      <change afterPath="$PROJECT_DIR$/src/app/_components/GhostButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/_components/CheckoutButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_components/CheckoutButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/_components/ghostButton.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/test/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/test/page.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
@@ -30,13 +43,13 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2ckQx7tlrxchffWCRrPdWsvrmXD" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -49,8 +62,8 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "checkoutbutton",
+    "last_opened_file_path": "C:/Users/socce/WebstormProjects/brewed-awakening",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -59,7 +72,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "C:\\Users\\socce\\WebstormProjects\\brewed-awakening\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -77,6 +90,7 @@
       <workItem from="1708809430445" duration="1560000" />
       <workItem from="1708984495330" duration="54000" />
       <workItem from="1708984861449" duration="142000" />
+      <workItem from="1709255910682" duration="2374000" />
     </task>
     <task id="LOCAL-00001" summary="CheckoutButoon">
       <option name="closed" value="true" />
@@ -115,9 +129,15 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/app/_components/ghostButton.jsx" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="CheckoutButoon" />
-    <option name="LAST_COMMIT_MESSAGE" value="CheckoutButoon" />
+    <MESSAGE value="Week 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Week 1" />
   </component>
 </project>
