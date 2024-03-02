@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d09f81b-569c-4e3f-ab3b-f7053422e372" name="Changes" comment="Week 1">
-      <change afterPath="$PROJECT_DIR$/src/app/_components/GhostButton.tsx" afterDir="false" />
+    <list default="true" id="2d09f81b-569c-4e3f-ab3b-f7053422e372" name="Changes" comment="Finished Ghostbutton and CheckoutButton">
+      <change afterPath="$PROJECT_DIR$/src/app/_components/Heading.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/_components/CheckoutButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_components/CheckoutButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/_components/ghostButton.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/test/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/test/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,26 +54,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "checkoutbutton",
-    "last_opened_file_path": "C:/Users/socce/WebstormProjects/brewed-awakening",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "C:\\Users\\socce\\WebstormProjects\\brewed-awakening\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;checkoutbutton&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/socce/WebstormProjects/brewed-awakening&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\socce\\WebstormProjects\\brewed-awakening\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -90,7 +88,9 @@
       <workItem from="1708809430445" duration="1560000" />
       <workItem from="1708984495330" duration="54000" />
       <workItem from="1708984861449" duration="142000" />
-      <workItem from="1709255910682" duration="2374000" />
+      <workItem from="1709255910682" duration="2805000" />
+      <workItem from="1709258892112" duration="25000" />
+      <workItem from="1709410669227" duration="957000" />
     </task>
     <task id="LOCAL-00001" summary="CheckoutButoon">
       <option name="closed" value="true" />
@@ -124,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708984926790</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finished Ghostbutton and CheckoutButton">
+      <option name="closed" value="true" />
+      <created>1709258714639</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709258714639</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +146,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="CheckoutButoon" />
     <MESSAGE value="Week 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Week 1" />
+    <MESSAGE value="Finished Ghostbutton and CheckoutButton" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Ghostbutton and CheckoutButton" />
   </component>
 </project>
