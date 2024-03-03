@@ -6,5 +6,5 @@ export const user = {
 export const adminUser = {
     id: "clry13crm000608jo1qzyem8h",
     email: "admin@email.co",
-    admin: true
+    isAdmin: true
 }
