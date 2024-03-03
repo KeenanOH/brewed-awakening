@@ -2,9 +2,9 @@ import { z } from "zod"
 
 export const User = z.object({
     id: z.string(),
-    name: z.optional(z.string()),
-    email: z.optional(z.string()),
-    image: z.optional(z.string()),
+    name: z.nullable(z.string()),
+    email: z.nullable(z.string()),
+    image: z.nullable(z.string()),
     isAdmin: z.boolean()
 })
 
