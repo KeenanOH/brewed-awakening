@@ -28,7 +28,6 @@ export const orderRouter = router({
         }),
     createOrder: authenticatedProcedure
         .input(z.object({
-            id: z.string(),
             createdAt: z.date(),
             completed: z.boolean(),
             userId: z.string(),
@@ -37,11 +36,16 @@ export const orderRouter = router({
         .query(async ({ ctx, input }) => {
             return ctx.prisma.order.create({
                 select: selectOrder,
-                data: input
+                data: { ...input, userId: ctx.user.id }
             })
         }),
     updateOrder: adminProcedure
-        .input(Order)
+        .input(z.object({
+            id: z.string(),
+            createdAt: z.date(),
+            completed: z.boolean(),
+            userId: z.string(),
+        }))
         .mutation(async ({ ctx, input }) => {
             await ctx.prisma.order.update({
                 data: input,
