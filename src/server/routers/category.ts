@@ -1,7 +1,7 @@
-import { router, adminProcedure, publicProcedure } from "@/server/trpc"
 import { z } from "zod"
 
 import { Category, selectCategory } from "@/models/category"
+import { adminProcedure, publicProcedure,router } from "@/server/trpc"
 
 export const categoryRouter = router({
     getCategory: publicProcedure
@@ -9,7 +9,7 @@ export const categoryRouter = router({
             id: z.string()
         }))
         .output(z.nullable(Category))
-        .query(async ({ctx, input}) => {
+        .query(async ({ ctx, input }) => {
             return ctx.prisma.category.findFirst({
                 select: selectCategory,
                 where: {

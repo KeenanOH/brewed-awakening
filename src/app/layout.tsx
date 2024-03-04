@@ -2,8 +2,11 @@ import "./globals.css"
 
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import React from "react"
 
-const inter = Inter({ subsets: ["latin"] })
+import ChakraProvider from "@/app/_providers/ChakraProvider"
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -18,9 +21,9 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <main>
-                    {children}
-                </main>
+                <ChakraProvider>
+                    { children }
+                </ChakraProvider>
             </body>
         </html>
     )
