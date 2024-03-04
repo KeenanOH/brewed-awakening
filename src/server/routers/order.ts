@@ -1,5 +1,6 @@
 import { z } from "zod"
 
+import { Item } from "@/models/item"
 import { Order, selectOrder } from "@/models/order"
 import { adminProcedure, authenticatedProcedure, publicProcedure, router } from "@/server/trpc"
 /*
@@ -31,20 +32,21 @@ export const orderRouter = router({
             createdAt: z.date(),
             completed: z.boolean(),
             userId: z.string(),
+            items: z.array(Item)
         }))
         .output(Order)
         .query(async ({ ctx, input }) => {
             return ctx.prisma.order.create({
                 select: selectOrder,
-                data: { ...input, userId: ctx.user.id }
+                data: { ...input, userId: ctx.user.id, items: { connect: input.items } }
             })
         }),
     updateOrder: adminProcedure
         .input(z.object({
-            id: z.string(),
             createdAt: z.date(),
             completed: z.boolean(),
             userId: z.string(),
+            id: z.string()
         }))
         .mutation(async ({ ctx, input }) => {
             await ctx.prisma.order.update({
