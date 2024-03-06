@@ -6,7 +6,7 @@ export const ItemDetail = z.object({
     id: z.string(),
     name: z.string(),
     imageUrl: z.string(),
-    category: Category
+    category: z.nullable(Category)
 })
 
 export type ItemDetail = z.infer<typeof ItemDetail>
