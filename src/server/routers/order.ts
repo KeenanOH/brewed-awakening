@@ -3,9 +3,7 @@ import { z } from "zod"
 import { Item } from "@/models/item"
 import { Order, selectOrder } from "@/models/order"
 import { adminProcedure, authenticatedProcedure, publicProcedure, router } from "@/server/trpc"
-/*
-What the hell?
- */
+
 export const orderRouter = router({
     getOrder: publicProcedure
         .input(z.object({
