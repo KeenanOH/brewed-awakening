@@ -1,11 +1,33 @@
+import { Button, Flex } from "@chakra-ui/react"
+import React from "react"
+import { FiArrowRight } from "react-icons/fi"
+
 type CheckoutButtonProps = {
-    label: string
-}
-export default function CheckoutButton({ label }: CheckoutButtonProps){
+    label: string;
+    rightIcon?: boolean;
+    width: string;
+    height: string;
+    borderRadius: string;
+    padding: string;
+
+};
+
+export default function CheckoutButton({ label, rightIcon, width, height,  borderRadius, padding }: CheckoutButtonProps){
     return (
-        <button style={{ font: "Inter", fontSize: "16px", width: "131px", height:"Fixed (40px)", top:"488px",
-            backgroundColor: "teal", color: "white", borderRadius: "5px", padding: "10px", cursor: "pointer"  }}>
-            {label}
-        </button>
+        <Flex position="absolute" >
+            <Button
+                size="md"
+                variant="solid"
+                colorScheme="teal"
+                rightIcon={rightIcon ? <FiArrowRight /> : undefined}
+                width={width}
+                height={height}
+                borderRadius={borderRadius}
+                padding={padding}
+                cursor="pointer"
+            >
+                {label}
+            </Button>
+        </Flex>
     )
 }
