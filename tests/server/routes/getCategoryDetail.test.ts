@@ -1,8 +1,7 @@
-import { TRPCError } from "@trpc/server"
 import { describe, expect,it } from "vitest"
 
 import { unauthenticatedCaller } from "../../callers"
-import {coffeeVariantOne} from "../../seed/items"
+import { coffeeVariantOne } from "../../seed/items"
 
 describe("getCategoryDetail tests", () => {
 

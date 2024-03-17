@@ -16,7 +16,7 @@ export const authenticatedCaller = createCaller({
         email: null,
         emailVerified: null,
         image: null,
-        admin: false
+        isAdmin: false
     }
 })
 
@@ -28,6 +28,6 @@ export const adminCaller = createCaller({
         email: null,
         emailVerified: null,
         image: null,
-        admin: true
+        isAdmin: true
     }
 })

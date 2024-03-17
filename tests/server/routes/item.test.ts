@@ -1,7 +1,6 @@
 import { TRPCError } from "@trpc/server"
 import { describe, expect,it } from "vitest"
 
-import { itemRouter } from "../../../src/server/routers/item"
 import { adminCaller, authenticatedCaller, unauthenticatedCaller } from "../../callers"
 import { coffeeVariantOne, deletableItem } from "../../seed/items"
 

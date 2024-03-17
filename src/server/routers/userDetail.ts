@@ -1,7 +1,7 @@
 import { z } from "zod"
-import { authenticatedProcedure, router } from "@/server/trpc"
 
-import { UserDetail, selectUserDetail } from "@/models/userDetail"
+import { selectUserDetail,UserDetail } from "@/models/userDetail"
+import { authenticatedProcedure, router } from "@/server/trpc"
 
 // note: you may need to search on prisma docs. Selecting the items needs an "includes" arg
 export const userDetailRouter = router({
@@ -18,6 +18,6 @@ export const userDetailRouter = router({
                     id: input.id,
                     email: input.email
                 }
-            });
+            })
         }),
 })

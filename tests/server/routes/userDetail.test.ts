@@ -2,8 +2,8 @@ import { TRPCError } from "@trpc/server"
 import { describe, expect, it } from "vitest"
 
 import { authenticatedCaller, unauthenticatedCaller }  from "../../callers"
-import { user }  from "../../seed/users"
 import { orderOne } from "../../seed/orders"
+import { user }  from "../../seed/users"
 
 describe("getUserDetail tests", () => {
 
@@ -29,11 +29,11 @@ describe("getUserDetail tests", () => {
         expect(authenticatedCaller.getUserDetail({ id: user.id }))
             .resolves
             .toSatisfy((obj) => {
-                let x = obj as { orders: {id: string}[] };
+                const x = obj as { orders: { id: string }[] }
                 for (const order of x.orders) {
-                    if(order.id === orderOne.id) return true;
+                    if(order.id === orderOne.id) return true
                 }
-                return false;
+                return false
             })
     })
     

@@ -24,7 +24,7 @@ export const authenticatedProcedure = t.procedure.use(async (opts) => {
 export const adminProcedure = t.procedure.use(async (opts) => {
     const { user } = opts.ctx
 
-    if (!user?.admin)
+    if (!user?.isAdmin)
         throw new TRPCError({ code: "UNAUTHORIZED" })
 
     return opts.next({

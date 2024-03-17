@@ -1,6 +1,7 @@
-import {publicProcedure, router} from "@/server/trpc"
-import {z} from "zod"
-import {CategoryDetail, selectCategoryDetail} from "@/models/categoryDetail"
+import { z } from "zod"
+
+import { CategoryDetail } from "@/models/categoryDetail"
+import { publicProcedure, router } from "@/server/trpc"
 
 // note: you may need to search on prisma docs. Selecting the items needs an "includes" arg
 export const categoryDetailRouter = router({
@@ -11,7 +12,9 @@ export const categoryDetailRouter = router({
         .output(z.nullable(CategoryDetail))
         .query(async ({ ctx, input }) => {
             return ctx.prisma.category.findFirst({
-                select: selectCategoryDetail,
+                include: {
+                    items: true
+                },
                 where: {
                     id: input.id
                 }
