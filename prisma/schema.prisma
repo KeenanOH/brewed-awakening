@@ -48,6 +48,7 @@ model User {
   accounts Account[]
   sessions Session[]
   orders   Order[]
+  reviews  Review[]
 }
 
 model VerificationToken {
@@ -66,7 +67,8 @@ model Item {
   categoryId String?
   category   Category? @relation(fields: [categoryId], references: [id], onDelete: SetNull)
 
-  orders Order[]
+  orders     Order[]
+  nutritions Nutrition[]
 }
 
 model Category {
@@ -89,4 +91,20 @@ model Order {
 model Dummy {
   id      String @id @default(cuid())
   content String
+}
+
+model Review {
+  id String @id @default(cuid())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Nutrition {
+  id String @id @default(cuid())
+
+  itemId String
+  item   Item   @relation(fields: [itemId], references: [id], onDelete: Cascade)
+
+  calories Int
 }
