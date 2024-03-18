@@ -1,4 +1,3 @@
-
 type FatButtonProps = {
     label: string
     onClick: () => void
@@ -10,4 +9,5 @@ export default function FatButton({ label, onClick }: FatButtonProps) {
             <p className="text-3xl font-bold text-white">{ label }</p>
         </button>
     )
+
 }
