@@ -3,6 +3,7 @@ import { categoryDetailRouter } from "@/server/routers/categoryDetail"
 import { dummyRouter } from "@/server/routers/dummy"
 import { itemRouter } from "@/server/routers/item"
 import { itemDetailRouter } from "@/server/routers/itemDetail"
+import { nutritionRouter } from "@/server/routers/nutrition"
 import { orderRouter } from "@/server/routers/order"
 import { orderDetailRouter } from "@/server/routers/orderDetail"
 import { userRouter } from "@/server/routers/user"
@@ -18,7 +19,8 @@ export const appRouter = mergeRouters(
     orderRouter,
     orderDetailRouter,
     userRouter,
-    userDetailRouter
+    userDetailRouter,
+    nutritionRouter
 )
 
 export type AppRouter = typeof appRouter
