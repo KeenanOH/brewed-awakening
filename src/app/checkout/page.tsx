@@ -1,11 +1,22 @@
-import { Heading } from "@chakra-ui/react"
+"use client"
+
+import { Button, Heading, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from "@chakra-ui/react"
+import React, { useState } from "react"
 
 import UserProfile from "@/app/checkout/_components/Avatar"
 import CheckoutButton from "@/app/checkout/_components/CheckoutButton"
 import CheckoutText2 from "@/app/checkout/_components/CheckoutText2"
 import OrderDetailsRow from "@/app/checkout/_components/OrderDetailsRow"
 
-export default function Checkout() {
+const Checkout = () => {
+    // State to manage modal visibility
+    const [isModalOpen, setIsModalOpen] = useState(false)
+
+    // Function to handle modal close
+    const closeModal = () => {
+        setIsModalOpen(false)
+    }
+
     return (
         <div style={{ margin: "50px" }}>
             <Heading>Brewed Awakening</Heading>
@@ -50,9 +61,27 @@ export default function Checkout() {
                     width={"131px"}
                     height={"40px"}
                     borderRadius={"6px"}
-                    padding={"0px, 16px, 0px, 16px"}
+                    padding={"0px 16px"}
+                    onClick={() => setIsModalOpen(true)} // Open modal on button click
                 />
             </div>
+
+            <Modal isOpen={isModalOpen} onClose={closeModal}>
+                <ModalOverlay />
+                <ModalContent>
+                    <ModalHeader>Checkout</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                        Would you like to proceed to the checkout.
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button colorScheme="gray" variant="solid" color="black" onClick={closeModal}>Cancel</Button>
+                        <CheckoutButton label= "Add"></CheckoutButton>
+                    </ModalFooter>
+                </ModalContent>
+            </Modal>
         </div>
     )
 }
+
+export default Checkout
