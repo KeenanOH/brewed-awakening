@@ -3,6 +3,7 @@ import { prisma } from "@/server/prisma"
 import { coffeeCategory, deletableCategory } from "./seed/categories"
 import { deletableDummy, dummy } from "./seed/dummies"
 import { coffeeVariantOne, deletableItem } from "./seed/items"
+import { coffeeNutrition } from "./seed/nutritions"
 import { deletableOrder, orderOne } from "./seed/orders"
 import { adminUser, user } from "./seed/users"
 
@@ -87,6 +88,13 @@ await prisma.order.upsert({
     },
     where: {
         id: deletableOrder.id
+    }
+})
+await prisma.nutrition.upsert({
+    create: coffeeNutrition,
+    update: coffeeNutrition, // not sure about this and also it's causing errors lol
+    where: {
+        id: coffeeNutrition.id
     }
 })
 
