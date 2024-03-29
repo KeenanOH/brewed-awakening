@@ -69,6 +69,7 @@ model Item {
 
   orders     Order[]
   nutritions Nutrition[]
+  reviews Review[]
 }
 
 model Category {
@@ -96,8 +97,11 @@ model Dummy {
 model Review {
   id String @id @default(cuid())
 
+  rating Int
   userId String
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  itemId String
+  item   Item   @relation(fields: [itemId], references: [id], onDelete: Cascade)
 }
 
 model Nutrition {
