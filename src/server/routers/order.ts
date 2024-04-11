@@ -25,6 +25,16 @@ export const orderRouter = router({
                 select: selectOrder
             })
         }),
+    getSortedOrders: publicProcedure
+        .output(z.array(Order))
+        .query(async ({ ctx }) => {
+            return ctx.prisma.order.findMany({
+                orderBy: {
+                    createdAt: "desc" // newest orders show up first
+                },
+                select: selectOrder
+            })
+        }),
     createOrder: authenticatedProcedure
         .input(z.object({
             createdAt: z.date(),

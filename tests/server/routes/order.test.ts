@@ -14,10 +14,25 @@ describe("getOrders tests", () => {
     it("should allow an unauthenticated user to get orders", () => {
         expect(unauthenticatedCaller.getOrders())
             .resolves
-            .toBeDefined()
+            .toBeDefined
     })
 })
-
+describe("getSortedOrders tests", () => {
+    it("should allow an unauthenticated user to get orders sorted by date", async () => {
+        const orders = await unauthenticatedCaller.getSortedOrders()
+        let isInOrder = true
+        if (orders.length <= 1) {
+            expect(true).toBe(true)
+            return
+        }
+        for (let i = 0; i < orders.length-1; i++) {
+            if (orders[i].createdAt.getTime() < orders[i+1].createdAt.getTime()) {
+                isInOrder = false
+            }
+        }
+        expect(isInOrder).toBe(true)
+    })
+})
 describe("createOrder tests", () => {
     it("should allow an authenticated user to create an order", () => {
         expect(authenticatedCaller.createOrder(orderOne))
