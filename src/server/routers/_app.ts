@@ -6,6 +6,7 @@ import { itemDetailRouter } from "@/server/routers/itemDetail"
 import { nutritionRouter } from "@/server/routers/nutrition"
 import { orderRouter } from "@/server/routers/order"
 import { orderDetailRouter } from "@/server/routers/orderDetail"
+import { reviewRouter } from "@/server/routers/review"
 import { statisticsRouter } from "@/server/routers/statistics"
 import { userRouter } from "@/server/routers/user"
 import { userDetailRouter } from "@/server/routers/userDetail"
@@ -19,6 +20,7 @@ export const appRouter = mergeRouters(
     itemDetailRouter,
     orderRouter,
     orderDetailRouter,
+    reviewRouter,
     userRouter,
     userDetailRouter,
     nutritionRouter,
