@@ -5,6 +5,7 @@ import { Inter } from "next/font/google"
 import React from "react"
 
 import ChakraProvider from "@/app/_providers/ChakraProvider"
+import TRPCProvider from "@/app/_providers/TRPCProvider"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
@@ -21,9 +22,11 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <ChakraProvider>
-                    { children }
-                </ChakraProvider>
+                <TRPCProvider>
+                    <ChakraProvider>
+                        { children }
+                    </ChakraProvider>
+                </TRPCProvider>
             </body>
         </html>
     )
