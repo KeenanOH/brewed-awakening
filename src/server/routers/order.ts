@@ -72,6 +72,14 @@ export const orderRouter = router({
             await ctx.prisma.order.delete({
                 where: input
             })
+        }),
+    getCompletedOrders: publicProcedure
+        .query(async ({ ctx }) => {
+            return ctx.prisma.order.count({
+                where: {
+                    completed: true
+                }
+            })
         })
 
 })
