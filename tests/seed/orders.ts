@@ -6,7 +6,7 @@ export const orderOne = {
     userId: user.id,
     completed: false,
     items: [coffeeVariantOne],
-    createdAt: new Date()
+    createdAt: new Date(),
 }
 
 export const deletableOrder = {

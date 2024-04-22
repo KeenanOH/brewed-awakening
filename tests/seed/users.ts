@@ -1,6 +1,6 @@
 export const user = {
     id: "clry0uuji000108jocmdfanoz",
-    email: "user@email.com"
+    email: "deeeeerrpp@gmail.com"
 }
 
 export const adminUser = {
