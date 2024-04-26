@@ -77,7 +77,15 @@ export const orderRouter = router({
         .query(async ({ ctx }) => {
             return ctx.prisma.order.count({
                 where: {
-                    completed: true
+                    completed: false
+                }
+            })
+        }),
+    getActiveOrders: publicProcedure
+        .query(async ({ ctx }) => {
+            return ctx.prisma.order.count({
+                where: {
+                    completed: false
                 }
             })
         })
