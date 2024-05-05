@@ -1,10 +1,12 @@
 import "./globals.css"
 
+import { Heading } from "@chakra-ui/react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import React from "react"
 
 import ChakraProvider from "@/app/_providers/ChakraProvider"
+import NextAuthProvider from "@/app/_providers/NextAuthProvider"
 import TRPCProvider from "@/app/_providers/TRPCProvider"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
@@ -24,7 +26,12 @@ export default function RootLayout({
             <body className={inter.className}>
                 <TRPCProvider>
                     <ChakraProvider>
-                        { children }
+                        <NextAuthProvider>
+                            <div className="p-8">
+                                <Heading>Brewed Awakenings</Heading>
+                                { children }
+                            </div>
+                        </NextAuthProvider>
                     </ChakraProvider>
                 </TRPCProvider>
             </body>
