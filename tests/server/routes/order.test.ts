@@ -81,3 +81,10 @@ describe("deleteOrder tests", () => {
             .toThrow(TRPCError)
     })
 })
+describe("getCompletedOrders tests", () => {
+    it("should allow an unauthenticated user to get orders", () => {
+        expect(unauthenticatedCaller.getCompletedOrders())
+            .resolves
+            .toBeDefined
+    })
+})
