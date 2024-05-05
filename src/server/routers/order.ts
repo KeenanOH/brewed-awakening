@@ -1,17 +1,17 @@
-import { createTransport,  } from "nodemailer"
+// import { createTransport,  } from "nodemailer"
 import { z } from "zod"
 
 import { Item } from "@/models/item"
 import { Order, selectOrder } from "@/models/order"
-import { selectUser } from "@/models/user"
+// import { selectUser } from "@/models/user"
 import { adminProcedure, authenticatedProcedure, publicProcedure, router } from "@/server/trpc"
-const sendgridTransport = require("nodemailer-sendgrid-transport")
+// const sendgridTransport = require("nodemailer-sendgrid-transport")
 
-const transporter = createTransport(sendgridTransport({
-    auth: {
-        api_key: process.env.SENDGRID_API_KEY
-    }
-}))
+// const transporter = createTransport(sendgridTransport({
+//     auth: {
+//         api_key: process.env.SENDGRID_API_KEY
+//     }
+// }))
 export const orderRouter = router({
     getOrder: publicProcedure
         .input(z.object({
@@ -45,30 +45,30 @@ export const orderRouter = router({
         }),
     createOrder: authenticatedProcedure
         .input(z.object({
-            createdAt: z.date(),
-            completed: z.boolean(),
-            userId: z.string(),
+            // createdAt: z.date(),
+            // completed: z.boolean(),
+            // userId: z.string(),
             items: z.array(Item),
-            email: z.boolean().default(false)
+            // email: z.boolean().default(false)
         }))
         .output(Order)
-        .query(async ({ ctx, input }) => {
-            if (input.email) {
-                const user = await ctx.prisma.user.findFirst({
-                    select: selectUser,
-                    where: { id: input.userId }
-                })
-                //TODO: send email
-                if (user && user.email) {
-                    console.log(user)
-                    transporter.sendMail({
-                        to: user.email,
-                        from: process.env.SENDGRID_EMAIL,
-                        subject: "Order confirmed",
-                        html: "<p>Your order with Brewed Awakening has been confirmed</p>"
-                    })
-                }
-            }
+        .mutation(async ({ ctx, input }) => {
+            // if (input.email) {
+            //     const user = await ctx.prisma.user.findFirst({
+            //         select: selectUser,
+            //         where: { id: input.userId }
+            //     })
+            //     //TODO: send email
+            //     if (user && user.email) {
+            //         console.log(user)
+            //         transporter.sendMail({
+            //             to: user.email,
+            //             from: process.env.SENDGRID_EMAIL,
+            //             subject: "Order confirmed",
+            //             html: "<p>Your order with Brewed Awakening has been confirmed</p>"
+            //         })
+            //     }
+            // }
             return ctx.prisma.order.create({
                 select: selectOrder,
                 data: { ...input, userId: ctx.user.id, items: { connect: input.items } }

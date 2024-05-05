@@ -28,19 +28,19 @@ describe("getItems tests", () => {
 describe("createDummy tests", () => {
 
     it("should NOT allow an unauthenticated user to create an item", () => {
-        expect(unauthenticatedCaller.createItem({ name: "Sweet Coffee", imageUrl: "https://i.ibb.co/vh5J91p/image.png" }))
+        expect(unauthenticatedCaller.createItem(coffeeVariantOne))
             .rejects
             .toThrow(TRPCError)
     })
 
     it("should NOT allow an authenticated user to create an item", () => {
-        expect(authenticatedCaller.createItem({ name: "Sweet Coffee", imageUrl: "https://i.ibb.co/vh5J91p/image.png" }))
+        expect(authenticatedCaller.createItem(coffeeVariantOne))
             .rejects
             .toThrow(TRPCError)
     })
 
     it("should allow an admin user to create an item", () => {
-        expect(adminCaller.createItem({ name: "Sweet Coffee", imageUrl: "https://i.ibb.co/vh5J91p/image.png" }))
+        expect(adminCaller.createItem(coffeeVariantOne))
             .resolves
             .toBeDefined()
     })

@@ -35,7 +35,7 @@ describe("getSortedOrders tests", () => {
 })
 describe("createOrder tests", () => {
     it("should allow an authenticated user to create an order", () => {
-        expect(authenticatedCaller.createOrder({ ...orderOne, email: true }))
+        expect(authenticatedCaller.createOrder({ ...orderOne  })) // , email: true }))
             .resolves
             .toBeDefined()
     })

@@ -19,5 +19,14 @@ export const categoryDetailRouter = router({
                     id: input.id
                 }
             })
+        }),
+    getCategoryDetails: publicProcedure
+        .output(z.array(CategoryDetail))
+        .query(async ({ ctx }) => {
+            return ctx.prisma.category.findMany({
+                include: {
+                    items: true
+                }
+            })
         })
 })
