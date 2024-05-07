@@ -37,7 +37,7 @@ export default function Cart() {
 
             <div className="flex flex-col gap-y-2">
                 { cartStore.cart.map(item =>
-                    <ItemRow key={ item.id } item={ item }/>
+                    <ItemRow key={ item.id } item={ item } removable={ true } />
                 ) }
             </div>
 
