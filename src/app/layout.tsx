@@ -1,7 +1,7 @@
 import "./globals.css"
 
 import { Heading } from "@chakra-ui/react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
 import React from "react"
 
@@ -10,7 +10,6 @@ import NextAuthProvider from "@/app/_providers/NextAuthProvider"
 import TRPCProvider from "@/app/_providers/TRPCProvider"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
-import type { Metadata, Viewport } from "next";
 
 const APP_NAME = "PWA App";
 const APP_DEFAULT_TITLE = "My Awesome PWA App";
