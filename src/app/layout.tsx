@@ -4,8 +4,7 @@ import { Heading } from "@chakra-ui/react"
 import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
 import React from "react"
-import NextLink from 'next/link'
-import { Link } from '@chakra-ui/react'
+import Link from 'next/link'
 
 import ChakraProvider from "@/app/_providers/ChakraProvider"
 import NextAuthProvider from "@/app/_providers/NextAuthProvider"
@@ -70,7 +69,7 @@ export default function RootLayout({
                     <ChakraProvider>
                         <NextAuthProvider>
                             <div className="p-8">
-                                <Link as={ NextLink }>
+                                <Link href="/">
                                     <Heading>Brewed Awakenings</Heading>
                                 </Link>
                                 { children }
