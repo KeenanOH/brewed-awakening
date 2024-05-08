@@ -48,7 +48,7 @@ export default function Cart() {
                         const promise = createOrder.mutateAsync({ items: cartStore.cart })
                             .then(order => {
                                 cartStore.clear()
-                                router.push(`/order/${order.id}`)
+                                router.replace(`/order/${order.id}`)
                             })
                             .catch(error => console.log(error))
 

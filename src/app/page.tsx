@@ -35,7 +35,7 @@ export default function Home() {
             <Text>Welcome to the Brewed Awakenings site.</Text>
             <Text>You can order online here!</Text>
 
-            <Button className="mt-4" leftIcon={ <ShoppingCart /> } onClick={ () => router.push("/cart") }>View Cart - { itemsCount } item(s)</Button>
+            <Button className="mt-4" leftIcon={ <ShoppingCart /> } onClick={ () => router.replace("/cart") }>View Cart - { itemsCount } item(s)</Button>
 
             <div className="mt-8 flex flex-col gap-y-4">
                 { categoryDetails.data?.map(category => {
